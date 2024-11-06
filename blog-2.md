@@ -18,6 +18,7 @@ async function fetchData(url: string) {
 }
 fetchData('https://api.example.com/data');
 
+
 Benefits:
 1. Cleaner Code: Avoids .then() and nested callbacks.
 2. Error Handling: Uses try/catch for better error managment.
