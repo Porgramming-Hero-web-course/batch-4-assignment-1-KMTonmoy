@@ -2,12 +2,18 @@
 {
     // ===========================
     function countWordOccurrences(sentence, word) {
-        const sentenceLower = sentence.toLowerCase();
-        const wordLower = word.toLowerCase();
-        const regex = new RegExp(`\\b${wordLower}\\b`, 'g');
-        const matches = sentenceLower.match(regex);
-        return matches ? matches.length : 0;
+        const lowerCaseSentence = sentence.toLowerCase();
+        const lowerCaseWord = word.toLowerCase();
+        const words = lowerCaseSentence.split(" ");
+        let count = 0;
+        for (let i = 0; i < words.length; i++) {
+            if (words[i] === lowerCaseWord) {
+                count++;
+            }
+        }
+        return count;
     }
-    console.log(countWordOccurrences("I love typescript", "typescript"));
+    const result = countWordOccurrences("I love typescript", "typescript");
+    console.log(result);
     // ===========================
 }
