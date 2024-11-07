@@ -8,6 +8,6 @@
         const matches = sentenceLower.match(regex);
         return matches ? matches.length : 0;
     }
-    console.log(countWordOccurrences("TypeScript is great. I love TypeScript!", "typescript"));
+    console.log(countWordOccurrences("I love typescript", "typescript"));
     // ===========================
 }
